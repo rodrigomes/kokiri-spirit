@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nickname:</b>
+  <%= @tree.nickname %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @tree.content %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @tree.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @tree.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_tree_path(@tree) %> |
+<%= link_to 'Back', trees_path %>

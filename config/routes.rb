@@ -1,4 +1,8 @@
 KokiriSpirit::Application.routes.draw do
+  resources :trees
+
+  root :to => 'trees#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
