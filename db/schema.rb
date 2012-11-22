@@ -21,9 +21,7 @@ ActiveRecord::Schema.define(:version => 20121122131344) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.boolean  "gmaps"
-    t.string   "street"
-    t.string   "city"
-    t.string   "country"
+    t.string   "adress"
   end
 
 end
