@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121122130508) do
+ActiveRecord::Schema.define(:version => 20121122131344) do
 
   create_table "trees", :force => true do |t|
     t.string   "nickname"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(:version => 20121122130508) do
     t.float    "longitude"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "gmaps"
+    t.string   "street"
+    t.string   "city"
+    t.string   "country"
   end
 
 end

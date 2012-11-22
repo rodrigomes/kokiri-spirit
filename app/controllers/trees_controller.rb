@@ -1,8 +1,10 @@
 class TreesController < ApplicationController
   # GET /trees
   # GET /trees.json
+
   def index
     @trees = Tree.all
+    @json = Tree.all.to_gmaps4rails
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,7 @@ class TreesController < ApplicationController
   # GET /trees/1.json
   def show
     @tree = Tree.find(params[:id])
+    @json = @tree.to_gmaps4rails
 
     respond_to do |format|
       format.html # show.html.erb
