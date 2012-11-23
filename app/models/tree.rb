@@ -1,6 +1,8 @@
 class Tree < ActiveRecord::Base
   attr_accessible :content, :latitude, :longitude, :nickname, :adress
 
+  belongs_to :user
+
   acts_as_gmappable
 
   def gmaps4rails_address
