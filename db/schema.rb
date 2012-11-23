@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123223729) do
+ActiveRecord::Schema.define(:version => 20121123233057) do
 
   create_table "trees", :force => true do |t|
     t.string   "nickname"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20121123223729) do
     t.datetime "updated_at", :null => false
     t.boolean  "gmaps"
     t.string   "adress"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

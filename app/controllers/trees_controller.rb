@@ -35,6 +35,7 @@ class TreesController < ApplicationController
   # GET /trees/new.json
   def new
     @tree = Tree.new
+    @users = User.all
     @name = "tree-#{Tree.count+1}"
 
     respond_to do |format|
@@ -46,6 +47,7 @@ class TreesController < ApplicationController
   # GET /trees/1/edit
   def edit
     @tree = Tree.find(params[:id])
+    @users = User.all
   end
 
   # POST /trees

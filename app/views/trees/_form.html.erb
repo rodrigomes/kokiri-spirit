@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label 'User' %><br />
+    <%= select_tag(:user_id, options_for_select(@users)) %>
+  </div>
 
   <div class="field">
     <%= f.label :nickname %><br />

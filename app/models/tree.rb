@@ -1,5 +1,5 @@
 class Tree < ActiveRecord::Base
-  attr_accessible :content, :latitude, :longitude, :nickname, :adress
+  attr_accessible :content, :latitude, :longitude, :nickname, :adress, :user_id
 
   belongs_to :user
 
