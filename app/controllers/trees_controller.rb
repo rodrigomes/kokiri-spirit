@@ -35,6 +35,7 @@ class TreesController < ApplicationController
   # GET /trees/new.json
   def new
     @tree = Tree.new
+    @name = "tree-#{Tree.count+1}"
 
     respond_to do |format|
       format.html # new.html.erb

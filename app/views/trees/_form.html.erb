@@ -13,7 +13,11 @@
 
   <div class="field">
     <%= f.label :nickname %><br />
-    <%= f.text_field :nickname %>
+    <% if @name %>
+      <%= f.text_field :nickname, :value => @name %>
+    <% else %>
+      <%= f.text_field :nickname %>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :content %><br />
