@@ -3,7 +3,14 @@ class TreesController < ApplicationController
   # GET /trees.json
 
   def index
-    @trees = Tree.all
+    if params[:filter] == 'nickname'
+      @trees = Tree.all(:order => "nickname ASC")
+    elsif params[:filter] == 'created_at'
+      @trees = Tree.all(:order => "created_at DESC")
+    else
+      @trees = Tree.all
+    end
+
     @json = Tree.all.to_gmaps4rails
 
     respond_to do |format|

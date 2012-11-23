@@ -5,10 +5,11 @@
 
 <table>
   <tr>
-    <th>Nickname</th>
+    <th><%= link_to 'Nickname', { controller: "trees", :action => :index, filter: 'nickname' } %></th>
     <th>Content</th>
     <th>Latitude</th>
     <th>Longitude</th>
+    <th><%= link_to 'Created_at', { controller: "trees", :action => :index, filter: 'created_at' } %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,6 +21,7 @@
     <td><%= tree.content %></td>
     <td><%= tree.latitude %></td>
     <td><%= tree.longitude %></td>
+    <td><%= tree.created_at %></td>
     <td><%= link_to 'Show', tree %></td>
     <td><%= link_to 'Edit', edit_tree_path(tree) %></td>
     <td><%= link_to 'Destroy', tree, method: :delete, data: { confirm: 'Are you sure?' } %></td>
