@@ -12,7 +12,8 @@
   <% end %>
   <div class="field">
     <%= f.label 'User' %><br />
-    <%= select_tag(:user_id, options_for_select(@users)) %>
+    <% users_array = User.all.map { |user| [user.name, user.id] } %>
+    <%= f.select(:user_id, options_for_select(users_array)) %>
   </div>
 
   <div class="field">
